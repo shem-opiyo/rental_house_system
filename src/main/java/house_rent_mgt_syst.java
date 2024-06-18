@@ -1,4 +1,4 @@
-/*
+ /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
@@ -7,6 +7,8 @@
  *
  * @author shonic
  */
+
+
 public class house_rent_mgt_syst extends javax.swing.JFrame {
 
     /**
@@ -60,6 +62,11 @@ public class house_rent_mgt_syst extends javax.swing.JFrame {
         jButton1.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("Login");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jLabel3.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(0, 0, 255));
@@ -119,7 +126,7 @@ public class house_rent_mgt_syst extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(431, Short.MAX_VALUE)
+                .addContainerGap(440, Short.MAX_VALUE)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
@@ -130,6 +137,15 @@ public class house_rent_mgt_syst extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        // open the Dashboard
+        AdministratorDashoboard dashboard = new AdministratorDashoboard();
+        dashboard.show();       //display the dashboard
+        
+        dispose();      //close the current window after opening dashboard
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments

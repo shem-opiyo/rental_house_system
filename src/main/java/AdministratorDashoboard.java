@@ -33,6 +33,7 @@ public class AdministratorDashoboard extends javax.swing.JFrame {
         jButton3 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Administrator  Dashboard");
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -64,6 +65,11 @@ public class AdministratorDashoboard extends javax.swing.JFrame {
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("Property");
         jButton1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jButton2.setBackground(new java.awt.Color(192, 192, 192));
         jButton2.setFont(new java.awt.Font("sansserif", 0, 24)); // NOI18N
@@ -130,7 +136,20 @@ public class AdministratorDashoboard extends javax.swing.JFrame {
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
+        // open the add property form
+        AddPropertyForm addproperty = new AddPropertyForm();
+        addproperty.show(); //display the add property form
+        
+        dispose();  //close the current form
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        // open property list
+        PropertyList propList = new PropertyList();
+        propList.show();    //display the property list upon clicking
+        dispose();  //close the currently running administrator dashboard window
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
